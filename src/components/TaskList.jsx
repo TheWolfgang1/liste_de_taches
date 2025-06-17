@@ -4,6 +4,7 @@ import TaskItem from "./TaskItem";
 
 function TaskList({ tasks, deleteTask, updateTask, toggleCompletion }) {
   return (
+    <div>
     <ul  className="task-list">
         {tasks.length === 0 ? (
             <li>Aucune tache pour le moment</li>
@@ -19,6 +20,7 @@ function TaskList({ tasks, deleteTask, updateTask, toggleCompletion }) {
             ))
         )}
     </ul>
+    </div>
   );
 }
 

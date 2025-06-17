@@ -43,6 +43,7 @@ function TaskItem({
                 </div>
             ) : (
                 <div>
+                    {/* Cliquer sur la tache pour marquer comme étant faite */}
                     <span
                         className={task.completed ? "completed" : ""}
                         onClick={() => toggleCompletion(task)}
