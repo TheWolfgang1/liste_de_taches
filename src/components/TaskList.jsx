@@ -1,7 +1,8 @@
 import React from "react";
 import TaskItem from "./TaskItem";
 
-
+// Composant pour afficher la liste des tâches
+// Il prend en props les tâches, la fonction de suppression, de mise à jour et de
 function TaskList({ tasks, deleteTask, updateTask, toggleCompletion }) {
   return (
     <div>

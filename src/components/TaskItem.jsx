@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import "../App.css";
 
-
 function TaskItem({
     task,
     updateTask,
@@ -12,6 +11,8 @@ function TaskItem({
     const [name, setname] = useState(task.name);
     const [description, setDescription] = useState(task.description);
 
+    // Fonction pour gérer la mise à jour de la tâche
+    // Elle vérifie que les champs requis sont remplis avant de mettre à jour la tâche
     const handleUpdate = (e) => {
         if (!name.trim || !description.trim) {
             alert("Le nom et la description sont requis.");
@@ -22,6 +23,8 @@ function TaskItem({
         setIsEditing(false);
     };
 
+    // Rendu de l'élément de la tâche
+    // Il affiche le nom et la description de la tâche, ainsi que des boutons pour modifier
     return (
         <li className={`task-item ${task.completed ? "completed" : ""}`}>
             {isEditing ? (

@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 
+// Composant pour le formulaire d'ajout de tâche
+// Il prend en props la fonction addTask pour ajouter une nouvelle tâche
 function TaskForm({addTask}) {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
@@ -7,6 +9,8 @@ function TaskForm({addTask}) {
 
     
 
+    // Fonction pour gérer la soumission du formulaire
+    // Elle vérifie que les champs requis sont remplis avant d'ajouter la tâche
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!name || !description || !dueDate) {
@@ -25,6 +29,9 @@ function TaskForm({addTask}) {
         setDueDate("");
     };
 
+
+    // Rendu du formulaire
+    // Il contient des champs pour le nom, la description et la date d'échéance
     return (
         <form onSubmit={handleSubmit} className="task-form">
             <input
